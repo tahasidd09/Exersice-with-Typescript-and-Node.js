@@ -34,9 +34,10 @@ var cars = [
 // Function to display information about each car
 function displayCars(carList) {
     console.log("List of Cars:");
-    carList.forEach(function (car, index) {
-        console.log("".concat(index + 1, ". ").concat(car.year, " ").concat(car.make, " ").concat(car.model, " (").concat(car.color, ")"));
-    });
+    // Introduce an intentional index error
+    for (var i = 0; i <= carList.length; i++) { // 'i <= carList.length' will cause an out-of-bounds error
+        console.log("".concat(i + 1, ". ").concat(carList[i].year, " ").concat(carList[i].make, " ").concat(carList[i].model, " (").concat(carList[i].color, ")"));
+    }
 }
 // Display the list of cars
 displayCars(cars);

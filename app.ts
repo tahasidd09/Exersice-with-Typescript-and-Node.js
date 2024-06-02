@@ -43,9 +43,11 @@ const cars: Car[] = [
 // Function to display information about each car
 function displayCars(carList: Car[]): void {
     console.log("List of Cars:");
-    carList.forEach((car, index) => {
-        console.log(`${index + 1}. ${car.year} ${car.make} ${car.model} (${car.color})`);
-    });
+
+    // Introduce an intentional index error
+    for (let i = 0; i <= carList.length; i++) { // 'i <= carList.length' will cause an out-of-bounds error
+        console.log(`${i + 1}. ${carList[i].year} ${carList[i].make} ${carList[i].model} (${carList[i].color})`);
+    }
 }
 
 // Display the list of cars
