@@ -1,14 +1,8 @@
-let animals: string[] = ['dog', 'cat', 'rabbit'];
-
-// Printing the name of each animal
-for (let animal of animals) {
-    console.log(animal);
+function make_shirt(size: string, message: string): void {
+    console.log(`The shirt size is ${size} and it has the message: "${message}" printed on it.`);
 }
 
-// Printing a statement about each animal
-for (let animal of animals) {
-    console.log(`A ${animal} would make a great pet.`);
-}
-
-// Statement about what these animals have in common
-console.log("Any of these animals would make a great pet!");
+// Call the function
+make_shirt('L', 'Hello World');
+make_shirt('M', 'TypeScript is awesome');
+make_shirt('S', 'I love coding');
