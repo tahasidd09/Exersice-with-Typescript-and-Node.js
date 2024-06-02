@@ -1,54 +1,62 @@
-// Define a type for a car
-type Car = {
-    make: string;
-    model: string;
-    year: number;
-    color: string;
-};
+let car: string = 'subaru';
 
-// Create an array of car objects
-const cars: Car[] = [
-    {
-        make: "Toyota",
-        model: "Camry",
-        year: 2020,
-        color: "Blue"
-    },
-    {
-        make: "Honda",
-        model: "Civic",
-        year: 2018,
-        color: "Red"
-    },
-    {
-        make: "Ford",
-        model: "Mustang",
-        year: 2021,
-        color: "Black"
-    },
-    {
-        make: "Chevrolet",
-        model: "Impala",
-        year: 2019,
-        color: "White"
-    },
-    {
-        make: "Tesla",
-        model: "Model 3",
-        year: 2022,
-        color: "Silver"
-    }
-];
+console.log("Is car == 'subaru'? I predict True.");
+console.log(car == 'subaru');  // True
 
-// Function to display information about each car
-function displayCars(carList: Car[]): void {
-    console.log("List of Cars:");
+console.log("Is car == 'honda'? I predict False.");
+console.log(car == 'honda');  // False
 
-    // Introduce an intentional index error
-    for (let i = 0; i <= carList.length; i++) { // 'i <= carList.length' will cause an out-of-bounds error
-        console.log(`${i + 1}. ${carList[i].year} ${carList[i].make} ${carList[i].model} (${carList[i].color})`);
-    }
-}
+let age: number = 25;
 
-// Display the list of cars
-displayCars(cars);
+console.log("Is age > 20? I predict True.");
+console.log(age > 20);  // True
+
+console.log("Is age < 20? I predict False.");
+console.log(age < 20);  // False
+
+let city: string = 'New York';
+
+console.log("Is city != 'Los Angeles'? I predict True.");
+console.log(city != 'Los Angeles');  // True
+
+console.log("Is city == 'New York'? I predict True.");
+console.log(city == 'New York');  // True
+
+let temperature: number = 30;
+
+console.log("Is temperature <= 30? I predict True.");
+console.log(temperature <= 30);  // True
+
+console.log("Is temperature >= 40? I predict False.");
+console.log(temperature >= 40);  // False
+
+let isRaining: boolean = false;
+
+console.log("Is isRaining == false? I predict True.");
+console.log(isRaining == false);  // True
+
+
+
+let fruits: string[] = ['apple', 'banana', 'cherry'];
+
+console.log("Is 'apple' in fruits? I predict True.");
+console.log(fruits.includes('apple'));  // True
+
+console.log("Is 'grape' in fruits? I predict False.");
+console.log(fruits.includes('grape'));  // False
+
+let colors: string[] = ['red', 'green', 'blue'];
+
+console.log("Is colors.length == 3? I predict True.");
+console.log(colors.length == 3);  // True
+
+console.log("Is colors.length == 5? I predict False.");
+console.log(colors.length == 5);  // False
+
+let height: number = 180;
+
+console.log("Is height > 170 && height < 190? I predict True.");
+console.log(height > 170 && height < 190);  // True
+
+console.log("Is height < 150 || height > 200? I predict False.");
+console.log(height < 150 || height > 200);  // False
