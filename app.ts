@@ -1,12 +1,8 @@
-function make_shirt(size: string = 'L', message: string = 'I love TypeScript'): void {
-    console.log(`The shirt size is ${size} and it has the message: "${message}" printed on it.`);
+function describe_city(city: string, country: string = 'USA'): void {
+    console.log(`${city} is in ${country}.`);
 }
 
-// Call the function to make a large shirt with the default message
-make_shirt();
-
-// Call the function to make a medium shirt with the default message
-make_shirt('M');
-
-// Call the function to make a shirt of any size with a different message
-make_shirt('S', 'JavaScript is cool');
+// Call the function for three different cities
+describe_city('New York'); // Using the default country
+describe_city('Los Angeles'); // Using the default country
+describe_city('Tokyo', 'Japan'); // Specifying a different country
