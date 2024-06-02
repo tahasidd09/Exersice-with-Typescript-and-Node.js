@@ -1,13 +1,16 @@
-let numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let favorite_pizzas: string[] = ['pepperoni', 'margherita', 'vegetarian'];
 
-for (let number of numbers) {
-    if (number === 1) {
-        console.log(`${number}st`);
-    } else if (number === 2) {
-        console.log(`${number}nd`);
-    } else if (number === 3) {
-        console.log(`${number}rd`);
-    } else {
-        console.log(`${number}th`);
-    }
+// Printing just the name of each pizza
+console.log("Printing just the name of each pizza:");
+for (let pizza of favorite_pizzas) {
+    console.log(pizza);
 }
+
+// Printing a sentence using the name of each pizza
+console.log("\nPrinting a sentence using the name of each pizza:");
+for (let pizza of favorite_pizzas) {
+    console.log(`I like ${pizza} pizza.`);
+}
+
+// Additional sentence expressing love for pizza
+console.log("\nI really love pizza!");
