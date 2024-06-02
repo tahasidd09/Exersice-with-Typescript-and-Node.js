@@ -1,13 +1,10 @@
-let usernames: string[] = []; // Empty array
+let current_users: string[] = ['alice', 'bob', 'charlie', 'david', 'emma'];
+let new_users: string[] = ['emma', 'frank', 'george', 'hannah', 'isaac'];
 
-if (usernames.length === 0) {
-    console.log("We need to find some users!");
-} else {
-    for (let username of usernames) {
-        if (username === 'admin') {
-            console.log("Hello admin, would you like to see a status report?");
-        } else {
-            console.log(`Hello ${username}, thank you for logging in again.`);
-        }
+for (let new_user of new_users) {
+    if (current_users.includes(new_user.toLowerCase())) {
+        console.log(`Sorry, the username "${new_user}" is already taken. Please enter a new username.`);
+    } else {
+        console.log(`Congratulations! The username "${new_user}" is available.`);
     }
 }

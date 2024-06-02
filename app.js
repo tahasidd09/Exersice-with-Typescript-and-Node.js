@@ -1,15 +1,11 @@
-var usernames = []; // Empty array
-if (usernames.length === 0) {
-    console.log("We need to find some users!");
-}
-else {
-    for (var _i = 0, usernames_1 = usernames; _i < usernames_1.length; _i++) {
-        var username = usernames_1[_i];
-        if (username === 'admin') {
-            console.log("Hello admin, would you like to see a status report?");
-        }
-        else {
-            console.log("Hello ".concat(username, ", thank you for logging in again."));
-        }
+var current_users = ['alice', 'bob', 'charlie', 'david', 'emma'];
+var new_users = ['emma', 'frank', 'george', 'hannah', 'isaac'];
+for (var _i = 0, new_users_1 = new_users; _i < new_users_1.length; _i++) {
+    var new_user = new_users_1[_i];
+    if (current_users.includes(new_user.toLowerCase())) {
+        console.log("Sorry, the username \"".concat(new_user, "\" is already taken. Please enter a new username."));
+    }
+    else {
+        console.log("Congratulations! The username \"".concat(new_user, "\" is available."));
     }
 }
