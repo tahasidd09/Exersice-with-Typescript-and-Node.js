@@ -1,15 +1,13 @@
-var favorite_pizzas = ['pepperoni', 'margherita', 'vegetarian'];
-// Printing just the name of each pizza
-console.log("Printing just the name of each pizza:");
-for (var _i = 0, favorite_pizzas_1 = favorite_pizzas; _i < favorite_pizzas_1.length; _i++) {
-    var pizza = favorite_pizzas_1[_i];
-    console.log(pizza);
+var animals = ['dog', 'cat', 'rabbit'];
+// Printing the name of each animal
+for (var _i = 0, animals_1 = animals; _i < animals_1.length; _i++) {
+    var animal = animals_1[_i];
+    console.log(animal);
 }
-// Printing a sentence using the name of each pizza
-console.log("\nPrinting a sentence using the name of each pizza:");
-for (var _a = 0, favorite_pizzas_2 = favorite_pizzas; _a < favorite_pizzas_2.length; _a++) {
-    var pizza = favorite_pizzas_2[_a];
-    console.log("I like ".concat(pizza, " pizza."));
+// Printing a statement about each animal
+for (var _a = 0, animals_2 = animals; _a < animals_2.length; _a++) {
+    var animal = animals_2[_a];
+    console.log("A ".concat(animal, " would make a great pet."));
 }
-// Additional sentence expressing love for pizza
-console.log("\nI really love pizza!");
+// Statement about what these animals have in common
+console.log("Any of these animals would make a great pet!");

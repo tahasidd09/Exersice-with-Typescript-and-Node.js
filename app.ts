@@ -1,16 +1,14 @@
-let favorite_pizzas: string[] = ['pepperoni', 'margherita', 'vegetarian'];
+let animals: string[] = ['dog', 'cat', 'rabbit'];
 
-// Printing just the name of each pizza
-console.log("Printing just the name of each pizza:");
-for (let pizza of favorite_pizzas) {
-    console.log(pizza);
+// Printing the name of each animal
+for (let animal of animals) {
+    console.log(animal);
 }
 
-// Printing a sentence using the name of each pizza
-console.log("\nPrinting a sentence using the name of each pizza:");
-for (let pizza of favorite_pizzas) {
-    console.log(`I like ${pizza} pizza.`);
+// Printing a statement about each animal
+for (let animal of animals) {
+    console.log(`A ${animal} would make a great pet.`);
 }
 
-// Additional sentence expressing love for pizza
-console.log("\nI really love pizza!");
+// Statement about what these animals have in common
+console.log("Any of these animals would make a great pet!");
