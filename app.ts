@@ -1,62 +1,74 @@
-let car: string = 'subaru';
+// Tests for equality and inequality with strings
+let brand: string = 'Nike';
 
-console.log("Is car == 'subaru'? I predict True.");
-console.log(car == 'subaru');  // True
+console.log("Is brand == 'Nike'? I predict True.");
+console.log(brand == 'Nike');  // True
 
-console.log("Is car == 'honda'? I predict False.");
-console.log(car == 'honda');  // False
+console.log("Is brand != 'Adidas'? I predict True.");
+console.log(brand != 'Adidas');  // True
 
-let age: number = 25;
+console.log("Is brand == 'Puma'? I predict False.");
+console.log(brand == 'Puma');  // False
 
-console.log("Is age > 20? I predict True.");
-console.log(age > 20);  // True
+// Tests using the lower case function
+let country: string = 'Canada';
 
-console.log("Is age < 20? I predict False.");
-console.log(age < 20);  // False
+console.log("Is country.toLowerCase() == 'canada'? I predict True.");
+console.log(country.toLowerCase() == 'canada');  // True
 
-let city: string = 'New York';
+console.log("Is country.toLowerCase() == 'CANADA'? I predict False.");
+console.log(country.toLowerCase() == 'CANADA');  // False
 
-console.log("Is city != 'Los Angeles'? I predict True.");
-console.log(city != 'Los Angeles');  // True
+// Numerical tests involving equality and inequality, greater than and less than, greater than or equal to, and less than or equal to
+let score: number = 85;
 
-console.log("Is city == 'New York'? I predict True.");
-console.log(city == 'New York');  // True
+console.log("Is score == 85? I predict True.");
+console.log(score == 85);  // True
 
-let temperature: number = 30;
+console.log("Is score != 90? I predict True.");
+console.log(score != 90);  // True
 
-console.log("Is temperature <= 30? I predict True.");
-console.log(temperature <= 30);  // True
+console.log("Is score > 80? I predict True.");
+console.log(score > 80);  // True
 
-console.log("Is temperature >= 40? I predict False.");
-console.log(temperature >= 40);  // False
+console.log("Is score < 90? I predict True.");
+console.log(score < 90);  // True
 
-let isRaining: boolean = false;
+console.log("Is score >= 85? I predict True.");
+console.log(score >= 85);  // True
 
-console.log("Is isRaining == false? I predict True.");
-console.log(isRaining == false);  // True
+console.log("Is score <= 80? I predict False.");
+console.log(score <= 80);  // False
 
+// Tests using "and" and "or" operators
+let age: number = 30;
 
+console.log("Is age > 20 && age < 40? I predict True.");
+console.log(age > 20 && age < 40);  // True
 
+console.log("Is age < 20 || age > 40? I predict False.");
+console.log(age < 20 || age > 40);  // False
+
+console.log("Is age > 20 && age < 25? I predict False.");
+console.log(age > 20 && age < 25);  // False
+
+console.log("Is age < 20 || age > 25? I predict True.");
+console.log(age < 20 || age > 25);  // True
+
+// Test whether an item is in an array
 let fruits: string[] = ['apple', 'banana', 'cherry'];
 
-console.log("Is 'apple' in fruits? I predict True.");
-console.log(fruits.includes('apple'));  // True
+console.log("Is 'banana' in fruits? I predict True.");
+console.log(fruits.includes('banana'));  // True
 
 console.log("Is 'grape' in fruits? I predict False.");
 console.log(fruits.includes('grape'));  // False
 
-let colors: string[] = ['red', 'green', 'blue'];
+// Test whether an item is not in an array
+let vegetables: string[] = ['carrot', 'potato', 'spinach'];
 
-console.log("Is colors.length == 3? I predict True.");
-console.log(colors.length == 3);  // True
+console.log("Is 'broccoli' not in vegetables? I predict True.");
+console.log(!vegetables.includes('broccoli'));  // True
 
-console.log("Is colors.length == 5? I predict False.");
-console.log(colors.length == 5);  // False
-
-let height: number = 180;
-
-console.log("Is height > 170 && height < 190? I predict True.");
-console.log(height > 170 && height < 190);  // True
-
-console.log("Is height < 150 || height > 200? I predict False.");
-console.log(height < 150 || height > 200);  // False
+console.log("Is 'carrot' not in vegetables? I predict False.");
+console.log(!vegetables.includes('carrot'));  // False
