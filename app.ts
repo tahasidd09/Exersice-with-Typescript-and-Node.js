@@ -1,16 +1,21 @@
-let age: number = 30;
+let favorite_fruits: string[] = ['banana', 'apple', 'mango'];
 
-if (age < 2) {
-    console.log("The person is a baby.");
-} else if (age >= 2 && age < 4) {
-    console.log("The person is a toddler.");
-} else if (age >= 4 && age < 13) {
-    console.log("The person is a kid.");
-} else if (age >= 13 && age < 20) {
-    console.log("The person is a teenager.");
-} else if (age >= 20 && age < 65) {
-    console.log("The person is an adult.");
-} else {
-    console.log("The person is an elder.");
+if (favorite_fruits.includes('banana')) {
+    console.log("You really like bananas!");
 }
 
+if (favorite_fruits.includes('apple')) {
+    console.log("You really like apples!");
+}
+
+if (favorite_fruits.includes('mango')) {
+    console.log("You really like mangoes!");
+}
+
+if (favorite_fruits.includes('strawberry')) {
+    console.log("You really like strawberries!");
+}
+
+if (favorite_fruits.includes('pineapple')) {
+    console.log("You really like pineapples!");
+}
