@@ -1,13 +1,19 @@
-function make_sandwich(...items: string[]): void {
-    console.log("Making a sandwich with the following items:");
-    for (let item of items) {
-        console.log(`- ${item}`);
-    }
-    console.log("Enjoy your sandwich!\n");
+interface Car {
+    manufacturer: string;
+    model: string;
+    [key: string]: any; // Allows arbitrary additional properties
 }
 
-// Call the function with different numbers of arguments
-make_sandwich('ham', 'cheese', 'lettuce');
-make_sandwich('turkey', 'bacon', 'avocado', 'tomato');
-make_sandwich('peanut butter', 'jelly');
+function store_car(manufacturer: string, model: string, ...options: [string, any][]): Car {
+    let car: Car = { manufacturer, model };
+    for (let [key, value] of options) {
+        car[key] = value;
+    }
+    return car;
+}
 
+// Call the function with required information and additional name-value pairs
+let my_car = store_car('Toyota', 'Corolla', ['color', 'red'], ['year', 2022]);
+
+// Print the returned object to check if the information was stored correctly
+console.log(my_car);
