@@ -4,17 +4,24 @@ function show_magicians(magicians: string[]): void {
     }
 }
 
-function make_great(magicians: string[]): void {
-    for (let i = 0; i < magicians.length; i++) {
-        magicians[i] = `the Great ${magicians[i]}`;
+function make_great(magicians: string[]): string[] {
+    let great_magicians: string[] = [];
+    for (let magician of magicians) {
+        great_magicians.push(`the Great ${magician}`);
     }
+    return great_magicians;
 }
 
 // Create an array of magician's names
 let magicians: string[] = ['Harry Houdini', 'David Copperfield', 'Penn Jillette', 'Teller', 'Criss Angel'];
 
-// Modify the array of magicians
-make_great(magicians);
+// Create a new array with the modified magician names
+let great_magicians = make_great([...magicians]);
 
-// Call the function to show the modified list of magician's names
+// Show the original magicians
+console.log("Original Magicians:");
 show_magicians(magicians);
+
+// Show the great magicians
+console.log("\nGreat Magicians:");
+show_magicians(great_magicians);
