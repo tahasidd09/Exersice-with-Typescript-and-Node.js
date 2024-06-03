@@ -1,8 +1,12 @@
-function describe_city(city: string, country: string = 'USA'): void {
-    console.log(`${city} is in ${country}.`);
+function city_country(city: string, country: string): string {
+    return `${city}, ${country}`;
 }
 
-// Call the function for three different cities
-describe_city('New York'); // Using the default country
-describe_city('Los Angeles'); // Using the default country
-describe_city('Tokyo', 'Japan'); // Specifying a different country
+// Call the function with three city-country pairs and print the values
+let city1 = city_country('Lahore', 'Pakistan');
+let city2 = city_country('New York', 'USA');
+let city3 = city_country('Tokyo', 'Japan');
+
+console.log(city1);
+console.log(city2);
+console.log(city3);
