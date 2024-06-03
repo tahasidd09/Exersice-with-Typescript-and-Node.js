@@ -1,12 +1,26 @@
-function city_country(city: string, country: string): string {
-    return `${city}, ${country}`;
+interface Album {
+    artist: string;
+    title: string;
+    tracks?: number;
 }
 
-// Call the function with three city-country pairs and print the values
-let city1 = city_country('Lahore', 'Pakistan');
-let city2 = city_country('New York', 'USA');
-let city3 = city_country('Tokyo', 'Japan');
+function make_album(artist: string, title: string, tracks?: number): Album {
+    let album: Album = { artist, title };
+    if (tracks !== undefined) {
+        album.tracks = tracks;
+    }
+    return album;
+}
 
-console.log(city1);
-console.log(city2);
-console.log(city3);
+// Create three albums and print the return values
+let album1 = make_album('Taylor Swift', 'Evermore');
+let album2 = make_album('Ed Sheeran', 'Divide');
+let album3 = make_album('Adele', '30', 12);
+
+console.log(album1);
+console.log(album2);
+console.log(album3);
+
+// Create an album with the number of tracks
+let album4 = make_album('BTS', 'Map of the Soul: 7', 20);
+console.log(album4);
