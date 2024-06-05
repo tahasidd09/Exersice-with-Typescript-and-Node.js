@@ -1,16 +1,20 @@
-function store_car(manufacturer, model) {
-    var options = [];
-    for (var _i = 2; _i < arguments.length; _i++) {
-        options[_i - 2] = arguments[_i];
-    }
-    var car = { manufacturer: manufacturer, model: model };
-    for (var _a = 0, options_1 = options; _a < options_1.length; _a++) {
-        var _b = options_1[_a], key = _b[0], value = _b[1];
-        car[key] = value;
-    }
-    return car;
+var guestList = ['Taha', "Anas", "Shahroz ", "Ali"];
+var dontcome = guestList[0];
+console.log(dontcome, "He will not come");
+guestList.splice(0, 1, "Zain");
+console.log("Good news ! we have found a bigger table for dinner");
+guestList.unshift("Taha");
+guestList.push("babar");
+var middle = Math.floor(guestList.length / 2);
+guestList.splice(middle, 0, "Amir");
+console.log('updated list of our guest');
+guestList.forEach(function (element) { console.log("HI ".concat(element, ",would you like to dinner with me?")); });
+console.log("unfortunately, the new dinner table wont arrive on time, so i can only invite two guests to dinner with me");
+while (guestList.length > 2) {
+    var kicked = guestList.pop();
+    console.log("sorry ".concat(kicked, " you are not invited to dinner"));
 }
-// Call the function with required information and additional name-value pairs
-var my_car = store_car('Toyota', 'Corolla', ['color', 'red'], ['year', 2022]);
-// Print the returned object to check if the information was stored correctly
-console.log(my_car);
+guestList.forEach(function (element) { console.log("HI ".concat(element, ", would you like to dinner with me?")); });
+guestList.pop();
+guestList.pop();
+console.log("Empty List", guestList);

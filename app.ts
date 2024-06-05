@@ -1,19 +1,38 @@
-interface Car {
-    manufacturer: string;
-    model: string;
-    [key: string]: any; // Allows arbitrary additional properties
+let guestList: string[] = ['Taha', "Anas" , "Shahroz ", "Ali"]
+
+  let dontcome = guestList[0]
+   
+  console.log (dontcome, "He will not come")
+
+  guestList.splice(0, 1, "Zain");
+ 
+  console.log("Good news ! we have found a bigger table for dinner");
+
+  guestList.unshift("Taha");
+
+  guestList.push("babar")
+ 
+  let middle : number= Math.floor(guestList.length / 2)
+
+  guestList.splice(middle,0,"Amir");
+   
+console.log('updated list of our guest')
+ guestList.forEach(element =>{console.log(`HI ${element},would you like to dinner with me?`)});
+
+console.log("unfortunately, the new dinner table wont arrive on time, so i can only invite two guests to dinner with me")
+
+while (guestList.length > 2) {
+  let kicked = guestList.pop();
+  console.log(`sorry ${kicked} you are not invited to dinner`)
 }
+guestList.forEach(element =>{console.log(`HI ${element}, would you like to dinner with me?`)});
 
-function store_car(manufacturer: string, model: string, ...options: [string, any][]): Car {
-    let car: Car = { manufacturer, model };
-    for (let [key, value] of options) {
-        car[key] = value;
-    }
-    return car;
-}
+ guestList.pop()
+ guestList.pop()    
 
-// Call the function with required information and additional name-value pairs
-let my_car = store_car('Toyota', 'Corolla', ['color', 'red'], ['year', 2022]);
+ console.log("Empty List",guestList)
+ 
 
-// Print the returned object to check if the information was stored correctly
-console.log(my_car);
+//  Dinner Guests: Working with one of the programs from Exercises 14 through 18, print a message indicating the number of people you are inviting to dinner.
+
+
